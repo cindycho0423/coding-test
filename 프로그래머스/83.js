@@ -1,6 +1,7 @@
 function solution(people, limit) {
-  let count = 0;
   const sortedPeople = [...people].sort((a, b) => a - b);
+  let count = 0;
+
   let light = 0;
   let heavy = sortedPeople.length - 1;
 
