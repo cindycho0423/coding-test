@@ -11,16 +11,17 @@
 
 // -> 내가 쓴 답
 
-function solution(s) {
-  let answer = [];
-  answer.push(s[0]);
-  for (let i = 0; i < s.length; i++) {
-    if (s[i] > s[i - 1]) {
-      answer.push(s[i]);
+function solution(arr) {
+  let answer = [arr[0]];
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i - 1] < arr[i]) {
+      answer.push(arr[i]);
     }
   }
   return answer;
 }
 
-let arr = [7, 3, 9, 5, 6, 12];
+// let arr = [7, 3, 9, 5, 6, 12];
+// let arr = [3, 7, 6, 9, 5, 6, 12];
+let arr = [8, 6, 4, 9, 5, 6, 12];
 console.log(solution(arr));
